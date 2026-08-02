@@ -64,6 +64,8 @@ function validateGuess(guessNum) {
             if (remainingAttempts === 0 && playGame) {
                 displayMessage(`Out of attempts. The number was ${NUM}`);
                 endGame();
+                submitbutton.replaceWith(playagain);
+
             }
 
         } else {
@@ -110,11 +112,28 @@ function displayMessage(message) {
 }
 
 function endGame() {
+    userGuess.value = ""
     playGame = false;
+    userGuess.setAttribute('disabled', '')
+    playAgain();
 }
 
-function newGame() {
+function playAgain() {
+    playagain.addEventListener('click', function (e) {
+        NUM = Math.floor(Math.random() * 100) + 1;
+        playGame = true;
 
+        remainingAttempts = 10;
+        guessSlot.innerHTML = "";
+
+        prevguess= [];
+        remaining.innerHTML = `${remainingAttempts}`;
+        userGuess.removeAttribute('disabled')
+
+        playagain.replaceWith(submitbutton);
+
+
+    })
 }
 
 
