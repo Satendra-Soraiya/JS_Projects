@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outerbox{
+    /* border: 2px solid white; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 400px;
+}
+
+.form{
+    border: 1px solid ;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.result{
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+}
+.photo{
+width: 300px;
+height: 400px;
+border: 1px solid;
+   
+}
